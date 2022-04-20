@@ -6,6 +6,7 @@ django를 활용한 wanted_pre_onboarding_backend_course
 ## 💻 사용 기술
 - HTML
 - Django
+- postgreSQL
 
 ### 디렉토리 구조
 ![image](https://user-images.githubusercontent.com/67543838/164177214-f69061d1-a9cb-4112-b811-6bce75b53f4b.png)
@@ -46,10 +47,21 @@ django를 활용한 wanted_pre_onboarding_backend_course
   
 ### 📺  시연 영상
 
-#### ✅ 서버실행 -> 홈화면 -> 질문화면
+#### ✅ 서버실행 -> 로그인화면 -> 홈화면
 
+![접속](https://user-images.githubusercontent.com/67543838/164185719-378b890f-d290-4c87-b53d-ad11e2d550fc.gif)
 
+#### ✅ 상품등록
 
-#### ✅ 어드민 페이지에서 질문 및 답변 확인
+![상품추가](https://user-images.githubusercontent.com/67543838/164185860-de413259-edcc-4672-8749-1f4d20ce751e.gif)
+
+#### ✅ 상품검색
+
+![상품검색](https://user-images.githubusercontent.com/67543838/164185880-d2159dab-307e-44a9-af76-45c5996ead69.gif)
+
+#### ✅ 상품 수정 및 삭제
+
+![상품 수정 및 삭제](https://user-images.githubusercontent.com/67543838/164185898-d76137d5-8971-46eb-a092-c4a972bfa9f5.gif)
+
   
 
