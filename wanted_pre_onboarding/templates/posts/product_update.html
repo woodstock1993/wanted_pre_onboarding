@@ -1,0 +1,21 @@
+{% extends "posts/index.html" %}
+
+{% block content %}
+
+<div class="product-create">
+    <div>
+       Update Product
+    </div>
+
+    <div class="form">
+        <form action="{% url 'posts:product_update' product.id %}"
+            method="post"
+            enctype="multipart/form-data"> <!--DB 저장 -->
+            {% csrf_token %}
+            {{ form.as_p}}
+            <input type="submit" value-="Update">
+        </form>
+    </div>
+</div>
+
+{% endblock content%}

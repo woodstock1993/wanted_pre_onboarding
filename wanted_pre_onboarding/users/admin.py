@@ -5,8 +5,9 @@ from django.utils.translation import gettext_lazy as _
 
 from wanted_pre_onboarding.users.forms import UserAdminChangeForm, UserAdminCreationForm
 
-User = get_user_model()
+auth_admin.UserAdmin.list_display = ()
 
+User = get_user_model()
 
 @admin.register(User)
 class UserAdmin(auth_admin.UserAdmin):

@@ -1,0 +1,24 @@
+{% load static %}
+
+<header class="header">
+    <div class="header-box">
+        <div class="main-img">
+            <a href="{% url 'posts:index' %}">
+                Home
+            </a>
+        </div>
+        <div class="search">
+            <form action="{% url 'posts:product_search' %}" method="GET">
+                <input type="text" name="search" placeholder="Search">
+            </form>
+        </div>
+        <div class="header-right">
+            <div>
+                <a href="{% url 'posts:product_create' %}">
+                    상품추가
+                </a>
+            </div>
+        </div>
+    </div>
+</header>
+

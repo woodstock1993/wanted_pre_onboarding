@@ -1,0 +1,19 @@
+{% extends "posts/index.html" %}
+{% load static %}
+
+{% block content %}
+
+Here is Post Main Page.
+{% for product in products %}
+        <div class="product-box">
+            상품 게시자: {{ product.product_writer }} /
+            상품 이름: {{ product.product_name }} /
+            총 펀딩금액: {{ product.funding_amount }} /
+            펀딩 종료일: {{ product.funding_end_date }}
+            {% if user.id == product.product_writer %} /
+                <a href="{% url 'posts:product_update' product.id %}">수정</a>
+                <a href="{% url 'posts:product_delete' product.id %}">삭제</a>
+            {% endif %}
+        </div>
+{% endfor %}
+{% endblock content %}

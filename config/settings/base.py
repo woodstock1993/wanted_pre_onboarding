@@ -42,10 +42,14 @@ LOCALE_PATHS = [str(ROOT_DIR / "locale")]
 # https://docs.djangoproject.com/en/dev/ref/settings/#databases
 
 DATABASES = {
-    "default": env.db(
-        "DATABASE_URL",
-        default="postgres://localhost/wanted_pre_onboarding",
-    ),
+    'default': {
+    'ENGINE': 'django.db.backends.postgresql',
+    'NAME': 'postgres',
+    'USER': 'postgres',
+    'PASSWORD': '0000',
+    'HOST': '127.0.0.1',
+    'PORT': '5432',
+    },
 }
 DATABASES["default"]["ATOMIC_REQUESTS"] = True
 # https://docs.djangoproject.com/en/stable/ref/settings/#std:setting-DEFAULT_AUTO_FIELD
@@ -67,9 +71,10 @@ DJANGO_APPS = [
     "django.contrib.sites",
     "django.contrib.messages",
     "django.contrib.staticfiles",
-    # "django.contrib.humanize", # Handy template tags
     "django.contrib.admin",
     "django.forms",
+    "wanted_pre_onboarding",
+    "wanted_pre_onboarding.posts",
 ]
 THIRD_PARTY_APPS = [
     "crispy_forms",
@@ -77,14 +82,16 @@ THIRD_PARTY_APPS = [
     "allauth",
     "allauth.account",
     "allauth.socialaccount",
+    "rest_framework",
 ]
 
 LOCAL_APPS = [
     "wanted_pre_onboarding.users",
     # Your stuff: custom apps go here
+
 ]
 # https://docs.djangoproject.com/en/dev/ref/settings/#installed-apps
-INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + LOCAL_APPS
+INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + LOCAL_APPS 
 
 # MIGRATIONS
 # ------------------------------------------------------------------------------
