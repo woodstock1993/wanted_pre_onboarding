@@ -6,7 +6,7 @@ django를 활용한 wanted_pre_onboarding_backend_course
 ## 💻 사용 기술
 - HTML
 - Django
-- postgreSQL
+- postgreSQL/pgadmin
 
 ### 디렉토리 구조
 ![image](https://user-images.githubusercontent.com/67543838/164177214-f69061d1-a9cb-4112-b811-6bce75b53f4b.png)
@@ -14,6 +14,7 @@ django를 활용한 wanted_pre_onboarding_backend_course
 ![image](https://user-images.githubusercontent.com/67543838/164177359-03034101-0fa1-4a28-9987-3b900ed73e28.png)
 
 ### 실행방법
+- master branch로 이동
 - local에 사용자/myenv 가상환경 설정 후 해당 파이썬으로 실행
 - pip install -r requirements.txt로 필요 패키지 다운
 - git clone wanted_pre_onboarding 폴더가 있는 경로에서 python manage.py runserver로 서버 실행
